@@ -1,0 +1,9 @@
+---
+
+# The ACL token to be used to configure and access Consul
+# from the Vault cluster.
+consul_acl_key: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+# A `target_`-namespaced variable (to avoid conflicts), with the value of the
+# primary vault datacenter, for access via Consul-configured DNS.
+target_vault_primary_datacenter: global
