@@ -2,6 +2,18 @@
 
 # The ACL token to be used to configure and access Consul
 # from the Vault cluster.
+#
+# This should be a *new* token, and NOT the master token used for the initial
+# bootstrapping of Consul's ACL configuration.
+#
+# Generate a new token via:
+#   NOTE: CONSUL_HTTP_TOKEN should be set outside the command-line, so that
+#   it's not visible in your shell history.
+#
+#   ```
+#   export CONSUL_HTTP_TOKEN="bc2b0299-e39d-43a2-aea8-1a5cc9684ec6"
+#   consul acl token create -policy-name=global-management
+#   ```
 consul_acl_key: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 # A `target_`-namespaced variable (to avoid conflicts), with the value of the
