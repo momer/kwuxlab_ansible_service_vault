@@ -1,5 +1,4 @@
 ---
-
 # The ACL token to be used to configure and access Consul
 # from the Vault cluster.
 #
@@ -12,10 +11,8 @@
 #
 #   ```
 #   export CONSUL_HTTP_TOKEN="bc2b0299-e39d-43a2-aea8-1a5cc9684ec6"
+#   # Note: the global-management policy is used here as an example;
+#   #       it can be replaced with a policy of more constrained access.
 #   consul acl token create -policy-name=global-management
 #   ```
 consul_acl_key: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-
-# A `target_`-namespaced variable (to avoid conflicts), with the value of the
-# primary vault datacenter, for access via Consul-configured DNS.
-target_vault_primary_datacenter: global
