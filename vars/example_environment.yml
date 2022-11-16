@@ -2,17 +2,13 @@
 # The ACL token to be used to configure and access Consul
 # from the Vault cluster.
 #
-# This should be a *new* token, and NOT the master token used for the initial
-# bootstrapping of Consul's ACL configuration.
+# https://developer.hashicorp.com/vault/docs/configuration/storage/consul
 #
-# Generate a new token via:
-#   NOTE: CONSUL_HTTP_TOKEN should be set outside the command-line, so that
-#   it's not visible in your shell history.
+# In production, this should be a *new* token, and NOT the master token used for
+# the initial bootstrapping of Consul's ACL configuration.
 #
-#   ```
-#   export CONSUL_HTTP_TOKEN="bc2b0299-e39d-43a2-aea8-1a5cc9684ec6"
-#   # Note: the global-management policy is used here as an example;
-#   #       it can be replaced with a policy of more constrained access.
-#   consul acl token create -policy-name=global-management
-#   ```
-consul_acl_key: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# Also note, that this is a sensitive value; an example UUID is provided below
+# for demonstration purposes, allowing for consistent/tangible examples
+# that can be followed across repositories.
+
+consul_acl_key: "bc2b0299-e39d-43a2-aea8-1a5cc9684ec6"
