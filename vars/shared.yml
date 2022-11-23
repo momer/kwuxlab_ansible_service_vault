@@ -2,9 +2,6 @@
 # Default host path to store local facts
 ansible_local_facts_dir: "{{ ansible_local_facts_dir | default('/etc/ansible/facts.d') }}"
 
-# Target docker user to run the Vault process.
-kwuxlab_docker_user: kwuxlab_dockerer
-
 # Set the ansible python interpreter on host
 ansible_python_interpreter: /usr/bin/python3
 
